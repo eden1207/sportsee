@@ -1,0 +1,58 @@
+@import "../Mixins/Mixin";
+
+@media all and (min-width: 1024px) {
+
+    .UserActivityGraph{
+        background-color: #fbfbfb;
+        border-radius: 5px;
+        @include margin-package(none, none, 2%, none);
+    }
+
+    .userActivityGraphTop{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include dimensions(95%, auto);
+        @include margin-package(none, none, 2%, none);
+    }
+
+    .userActivityGraphTitle{
+        @include syntaxe-roboto(15px, normal);
+        color: #20253A;
+    }
+
+    .userActivityGraphLegend{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        @include syntaxe-roboto(14px, normal);
+        color: #74798C;
+        @include dimensions(32%, auto);
+    }
+
+    .userActivityGraphLegendBlackPoint{
+        color: #282D30;
+        @include syntaxe-roboto(10px, normal);
+        @include margin-package(none, none, none, 10px);
+    }
+
+    .userActivityGraphLegendRedPoint{
+        color: #E60000;
+        @include syntaxe-roboto(10px, normal);
+        @include margin-package(none, none, none, 10px);
+    }
+
+    .Tooltip{
+        /*display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;*/
+        list-style: none;
+        color: white;
+        background-color: #E60000;
+       /* @include dimensions(10%, 100px);*/
+        @include syntaxe-roboto(7px, normal);
+    }
+
+}

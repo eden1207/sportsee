@@ -1,0 +1,63 @@
+@import "../Mixins/Mixin";
+
+@media all and (min-width: 1024px) {
+    .Userpage{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        &_dimensions{
+            @include dimensions(100%, 1024px);
+        }
+    }
+
+    .Main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_dimensions{
+            @include dimensions(100%, 933px);
+        }
+    }
+
+    .PageContent{
+        @include dimensions(100%, 933px);
+    }
+
+    .DataPart{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_dimensions{
+            @include dimensions(100%, 683px);
+        }
+    }
+    
+    .UserMainData{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &_dimensions{
+            row-gap: 40px;
+            @include dimensions(25%, 683px);
+        }
+    }
+
+    .UserGraphs{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        &_dimensions{
+            @include dimensions(75%, 683px);
+        }
+    }
+
+    .OtherDatas{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include dimensions(100%, 363px);
+    }
+}

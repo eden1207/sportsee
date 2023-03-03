@@ -1,0 +1,31 @@
+@import "../Mixins/Mixin";
+
+
+@media all and (min-width: 1024px) {
+
+    .PageTitle{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        @include dimensions(100%, 250px);
+        line-height: 30px;
+    }
+
+    .title{
+        color: black;
+        @include syntaxe-roboto(48px, bold);
+        @include margin-package(none, none, 8%, none);
+    }
+
+    .titleUser{
+        color: red;
+        @include syntaxe-roboto(48px, bold);
+    }
+
+    .subtitle{
+        color: black;
+        @include syntaxe-roboto(18px, normal);
+        @include margin-package(none, none, 8%, none);
+    }
+}

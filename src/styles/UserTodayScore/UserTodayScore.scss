@@ -1,0 +1,15 @@
+@import "../Mixins/Mixin";
+
+@media all and (min-width: 1024px) {
+
+    .UserTodayScore{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        @include dimensions(30%, 263px);
+        @include margin-package(none, 35px, none, none);
+        background-color: #fbfbfb;
+        border-radius: 5px;
+    }
+}

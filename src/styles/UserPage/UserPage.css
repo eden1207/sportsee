@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@media all and (min-width: 1024px) {
+  .Userpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Userpage_dimensions {
+    width: 100%;
+    height: 1024px;
+  }
+  .Main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Main_dimensions {
+    width: 100%;
+    height: 933px;
+  }
+  .PageContent {
+    width: 100%;
+    height: 933px;
+  }
+  .DataPart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .DataPart_dimensions {
+    width: 100%;
+    height: 683px;
+  }
+  .UserMainData {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .UserMainData_dimensions {
+    row-gap: 40px;
+    width: 25%;
+    height: 683px;
+  }
+  .UserGraphs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .UserGraphs_dimensions {
+    width: 75%;
+    height: 683px;
+  }
+  .OtherDatas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 363px;
+  }
+}/*# sourceMappingURL=UserPage.css.map */

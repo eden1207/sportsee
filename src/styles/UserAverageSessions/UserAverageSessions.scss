@@ -1,0 +1,14 @@
+@import "../Mixins/Mixin";
+
+@media all and (min-width: 1024px) {
+
+    .UserAverageSessions{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include dimensions(33%, 263px);
+        @include margin-package(none, 35px, none, none);
+        background-color: #ff0000;
+        border-radius: 5px;
+    }
+}

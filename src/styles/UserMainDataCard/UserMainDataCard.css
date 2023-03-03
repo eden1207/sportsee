@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@media all and (min-width: 1024px) {
+  .userMainDataCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .userMainDataCard_dimensions {
+    width: 70%;
+    height: 124px;
+  }
+  .userMainDataCard_aspect {
+    background-color: #fbfbfb;
+    border-radius: 5px;
+  }
+  .userDataCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+  .userDataCard_dimensions {
+    width: 60px;
+    height: 60px;
+  }
+  .userDataCard_borders {
+    margin-top: none;
+    margin-bottom: none;
+    margin-left: 10%;
+    margin-right: none;
+    border-radius: 6px;
+  }
+  .userDataCardRed {
+    color: #ff0000;
+    background: rgba(255, 0, 0, 0.07);
+  }
+  .userDataCardBlue {
+    color: #4AB8FF;
+    background: rgba(74, 184, 255, 0.07);
+  }
+  .userDataCardYellow {
+    color: #FDCC0C;
+    background: rgba(253, 204, 12, 0.07);
+  }
+  .userDataCardPink {
+    color: #FD5181;
+    background: rgba(253, 81, 129, 0.07);
+  }
+  .userDataCard-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .userDataCard-text_dimensions {
+    width: 55%;
+    height: 60px;
+    line-height: 10px;
+  }
+  .userDataCard-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #282D30;
+  }
+  .userDataCard-name {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #74798C;
+  }
+}/*# sourceMappingURL=UserMainDataCard.css.map */

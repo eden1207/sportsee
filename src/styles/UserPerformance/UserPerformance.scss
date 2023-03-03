@@ -1,0 +1,14 @@
+@import "../Mixins/Mixin";
+
+@media all and (min-width: 1024px) {
+
+    .UserPerformance{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include dimensions(30%, 263px);
+        @include margin-package(none, 35px, none, none);
+        background-color: #282D30;
+        border-radius: 5px;
+    }
+}
