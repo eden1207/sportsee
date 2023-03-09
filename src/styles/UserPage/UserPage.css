@@ -57,7 +57,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 89%;
     height: 363px;
+    margin-top: none;
+    margin-bottom: none;
+    margin-left: 2%;
+    margin-right: none;
   }
 }/*# sourceMappingURL=UserPage.css.map */

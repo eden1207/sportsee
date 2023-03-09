@@ -58,6 +58,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @include dimensions(100%, 363px);
+        @include dimensions(89%, 363px);
+        @include margin-package(none, none, 2%, none);
     }
 }

@@ -1,51 +1,9 @@
-import { React } from 'react'
-
-//import React, { PureComponent } from 'react';
-//import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import React from 'react'
+import PropTypes from 'prop-types';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
+import { GiPlainCircle } from "react-icons/gi";
 import '../../styles/UserActivity/UserActivity.css'
 
-import { GiPlainCircle } from "react-icons/gi";
-
-
-  const data = [
-    {
-      name: '1',
-      kilogram: 80,
-      calories: 240,
-    },
-    {
-      name: '2',
-      kilogram: 80,
-      calories: 220,
-    },
-    {
-      name: '3',
-      kilogram: 81,
-      calories: 280,
-    },
-    {
-      name: '4',
-      kilogram: 81,
-      calories: 290,
-    },
-    {
-      name: '5',
-      kilogram: 80,
-      calories: 160,
-    },
-    {
-      name: '6',
-      kilogram: 78,
-      calories: 162,
-    },
-    {
-      name: '7',
-      kilogram: 76,
-      calories: 390,
-    },
-  ];
 
 
   function CustomTooltip({ kilogram, calories }) {
@@ -70,19 +28,23 @@ import { GiPlainCircle } from "react-icons/gi";
   }
 
 
-export default function UserActivity() {
+export default function UserActivity({ userActivityData }) {
 
     return (
         <ResponsiveContainer className='UserActivityGraph' width="90%" height="48%">
-          <BarChart data={data}>
+          <BarChart data={userActivityData}>
             <CartesianGrid vertical={false} strokeDasharray="3 3" />
-            <XAxis tickLine={false} dataKey="name" />
+            <XAxis tickLine={false} dataKey="day" />
             <YAxis tickLine={false} orientation='right' axisLine={false} />
-            <Tooltip content={<CustomTooltip kilogram={data[0].kilogram} calories={data[0].calories} />} />
+            <Tooltip content={<CustomTooltip kilogram={userActivityData.kilogram} calories={userActivityData.calories} />} />
             <Legend content={<CustomLegend />} verticalAlign="top" />
             <Bar dataKey="kilogram" barSize={10} radius={[5, 5, 0, 0]} fill="#282D30" />
             <Bar dataKey="calories" barSize={10} radius={[5, 5, 0, 0]} fill="#E60000" />
           </BarChart>
         </ResponsiveContainer>
-      );
+    );
+}
+
+UserActivity.propTypes = {
+  userActivityData: PropTypes.arrayOf(PropTypes.object)
 }

@@ -1,9 +1,10 @@
-import { React } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types';
 
 import '../../styles/UserMainDataCard/UserMainDataCard.css'
 
 
-export default function UserMainDataCard({ title, name, symbol, color }) {
+export default function UserMainDataCard({ symbol, color, title, name }) {
 
     return (
         <div className='userMainDataCard userMainDataCard_dimensions userMainDataCard_aspect'>
@@ -16,4 +17,11 @@ export default function UserMainDataCard({ title, name, symbol, color }) {
             </div>
         </div>
     )
+}
+
+UserMainDataCard.propTypes = {
+    symbol: PropTypes.element,
+    color: PropTypes.string,
+    title: PropTypes.string,
+    name: PropTypes.string
 }
