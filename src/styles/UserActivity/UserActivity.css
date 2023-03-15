@@ -22,7 +22,7 @@
   .userActivityGraphTitle {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
-    font-weight: normal;
+    font-weight: bold;
     color: #20253A;
   }
   .userActivityGraphLegend {
@@ -57,17 +57,28 @@
     margin-left: none;
     margin-right: 10px;
   }
-  .Tooltip {
-    /*display: flex;
+  /*.Tooltip{*/
+  /*display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;*/
+  /*list-style: none;
+  color: white;*/
+  /*background-color: #E60000;*/
+  /* @include dimensions(10%, 100px);*/
+  /* @include syntaxe-roboto(7px, normal);
+  }*/
+  .custom-tooltip2 {
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;*/
-    list-style: none;
-    color: white;
+    align-items: center;
     background-color: #E60000;
-    /* @include dimensions(10%, 100px);*/
+    width: 39px;
+    height: 63px;
     font-family: "Roboto", sans-serif;
     font-size: 7px;
     font-weight: normal;
+    color: white;
   }
 }/*# sourceMappingURL=UserActivity.css.map */

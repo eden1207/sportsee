@@ -11,4 +11,32 @@
         background-color: #ff0000;
         border-radius: 5px;
     }
+
+    .custom-tooltip{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 39px;
+        height: 25px;
+        @include syntaxe-roboto(8px, normal);
+        color: black;
+    }   
+
+    .userAverageSessionsGraphTop{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include dimensions(70%, auto);
+        @include margin-package(none, none, 2%, none);
+    }
+
+    .userAverageSessionsGraphTitle{
+        @include syntaxe-roboto(15px, normal);
+        color: #ffffff;
+        opacity: 0.5;
+        line-height: 25px;
+        text-align: left;
+        @include margin-package(30px, none, 10%, none);
+    }
 }

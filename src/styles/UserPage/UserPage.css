@@ -25,7 +25,7 @@
   }
   .DataPart {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
   }
   .DataPart_dimensions {
@@ -50,7 +50,7 @@
     align-items: center;
   }
   .UserGraphs_dimensions {
-    width: 75%;
+    width: 72%;
     height: 683px;
   }
   .OtherDatas {

@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 30%;
+    width: 33%;
     height: 263px;
     margin-top: none;
     margin-bottom: 35px;
@@ -14,4 +14,64 @@
     background-color: #fbfbfb;
     border-radius: 5px;
   }
+}
+.userPerformanceLegend {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: none;
+  margin-bottom: -100%;
+  margin-left: none;
+  margin-right: none;
+  width: none;
+  height: 270px;
+  row-gap: 8px;
+}
+
+.userPerformanceGraphTop {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  margin-top: none;
+  margin-bottom: none;
+  margin-left: 2%;
+  margin-right: none;
+}
+
+.userPerformanceGraphTitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #20253A;
+}
+
+.userPerformanceGraphLegend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 160px;
+  padding-top: none;
+  padding-bottom: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.userPerformanceGraphLegendTitle {
+  color: #74798C;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.userPerformanceGraphLegendBoldTitle {
+  color: #282D30;
+  font-family: "Roboto", sans-serif;
+  font-size: 26px;
+  font-weight: bold;
 }/*# sourceMappingURL=UserTodayScore.css.map */

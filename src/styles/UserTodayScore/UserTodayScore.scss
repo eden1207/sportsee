@@ -7,9 +7,52 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        @include dimensions(30%, 263px);
+        @include dimensions(33%, 263px);
         @include margin-package(none, 35px, none, none);
         background-color: #fbfbfb;
         border-radius: 5px;
     }
+}
+
+.userPerformanceLegend{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @include margin-package(none, -100%, none, none);
+    @include dimensions(none, 270px);
+    row-gap: 8px;
+}
+
+.userPerformanceGraphTop{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include dimensions(80%, auto);
+    @include margin-package(none, none, 2%, none);
+}
+
+.userPerformanceGraphTitle{
+    @include syntaxe-roboto(15px, bold);
+    color: #20253A;
+}
+
+.userPerformanceGraphLegend{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include dimensions(80px, 160px);
+    @include padding-package(none, none, 40px, 40px);
+    border-radius: 50%;
+    background-color: white;
+}
+
+.userPerformanceGraphLegendTitle{
+    color: #74798C;
+    @include syntaxe-roboto(16px, normal);
+}
+
+.userPerformanceGraphLegendBoldTitle{
+    color: #282D30;
+    @include syntaxe-roboto(26px, bold);
 }

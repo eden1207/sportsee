@@ -4,7 +4,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 30%;
+    width: 33%;
     height: 263px;
     margin-top: none;
     margin-bottom: 35px;
@@ -12,5 +12,8 @@
     margin-right: none;
     background-color: #282D30;
     border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: normal;
   }
 }/*# sourceMappingURL=UserPerformance.css.map */

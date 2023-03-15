@@ -26,7 +26,7 @@
 
     .DataPart{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         &_dimensions{
             @include dimensions(100%, 683px);
@@ -50,7 +50,7 @@
         justify-content: space-between;
         align-items: center;
         &_dimensions{
-            @include dimensions(75%, 683px);
+            @include dimensions(72%, 683px);
         }
     }
 

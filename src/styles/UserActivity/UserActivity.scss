@@ -17,7 +17,7 @@
     }
 
     .userActivityGraphTitle{
-        @include syntaxe-roboto(15px, normal);
+        @include syntaxe-roboto(15px, bold);
         color: #20253A;
     }
 
@@ -43,16 +43,27 @@
         @include margin-package(none, none, none, 10px);
     }
 
-    .Tooltip{
+    /*.Tooltip{*/
         /*display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;*/
-        list-style: none;
-        color: white;
-        background-color: #E60000;
+        /*list-style: none;
+        color: white;*/
+        /*background-color: #E60000;*/
        /* @include dimensions(10%, 100px);*/
-        @include syntaxe-roboto(7px, normal);
-    }
+       /* @include syntaxe-roboto(7px, normal);
+    }*/
 
+    .custom-tooltip2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #E60000;
+        width: 39px;
+        height: 63px;
+        @include syntaxe-roboto(7px, normal);
+        color: white;
+    }   
 }

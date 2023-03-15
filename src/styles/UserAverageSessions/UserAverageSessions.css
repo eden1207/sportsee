@@ -13,4 +13,40 @@
     background-color: #ff0000;
     border-radius: 5px;
   }
+  .custom-tooltip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 39px;
+    height: 25px;
+    font-family: "Roboto", sans-serif;
+    font-size: 8px;
+    font-weight: normal;
+    color: black;
+  }
+  .userAverageSessionsGraphTop {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    margin-top: none;
+    margin-bottom: none;
+    margin-left: 2%;
+    margin-right: none;
+  }
+  .userAverageSessionsGraphTitle {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    color: #ffffff;
+    opacity: 0.5;
+    line-height: 25px;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: none;
+    margin-left: 10%;
+    margin-right: none;
+  }
 }/*# sourceMappingURL=UserAverageSessions.css.map */
