@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 import '../../styles/UserPage/UserPage.css'
 
@@ -16,6 +17,21 @@ import GiveUserPerformance from '../../services/GiveUserPerformance'
 import UserTodayScore from './UserTodayScore';
 
 
+/*-- Function UserPage used as a pattern to display the different user data --*/
+
+/* Header is a component displaying the header */
+
+/* IconTape displays the vertical black tape with icons */
+
+/* PageTitle is a component to provide the title and the user's firstname */
+
+/* The three components 'GiveUserActivity', 'GiveUserAverageSessions' and 'GiveUserPerformance'
+    are used to display the three graphs  */
+
+/* UserTodayScore displays the daily user score */
+
+/* Finally, the components 'UserMainDataCard' provide the main informations on the right
+    such as the calories rates and so on */
 
 
 export default function UserPage({ data }) {
@@ -47,4 +63,8 @@ export default function UserPage({ data }) {
             </div>
         </div>
     )
+}
+
+UserPage.propTypes = {
+    data: PropTypes.object
 }

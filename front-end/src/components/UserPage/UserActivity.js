@@ -4,7 +4,10 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import { GiPlainCircle } from "react-icons/gi";
 import '../../styles/UserActivity/UserActivity.css'
 
+/*-- Function UserActivity made to display the weight and calories of each user as function of the days --*/
 
+
+/* Function to create a tooltip displaying the weight and calories  */
 
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
@@ -19,6 +22,9 @@ import '../../styles/UserActivity/UserActivity.css'
     return null;
   };
 
+
+  /* Function associated to the component CustomLegend used to display the graph legend the graph title */
+
   function CustomLegend() {
     return(
         <div className='userActivityGraphTop'>
@@ -31,6 +37,37 @@ import '../../styles/UserActivity/UserActivity.css'
     )
   }
 
+
+/* Main function displaying the weight and calories of each user as function of the days */
+
+/* It returns different components which are ResponsiveContainer, BarChart,
+   Bar, Legend, Tooltip, CartesianGrid, XAxis and YAxis */
+
+/* The component ResponsiveContainer is used to make the graph responsive and fix the dimensions */
+
+/* BarChart and Bar are the components displaying the graph.
+   There are many arguments:
+   - margin: fixes the graph outer margins
+   - data and dataKey: receives the data
+   - fill: bars color
+   - radius: around bars angles
+   - barsize: bars' width
+*/
+
+/* Tooltip is a component creating a tooltp following the cursor
+   - content: creates and customizes a toolTip 
+   - cursor: toolTip's width
+   - contentStyle: customizes the toolti appearence
+*/
+
+/* Legend is a component giving the main title and the graph legend */
+
+/* XAxis and YAxis display the different axis:
+   - axisline: displays the axis lines
+   - tickline: displays the graduations
+   - orientation: ut the y axis on the right of the graph
+   - dataKey: take the data
+*/
 
 export default function UserActivity({ data }) {
 
@@ -53,11 +90,5 @@ export default function UserActivity({ data }) {
 }
 
 UserActivity.propTypes = {
-  id: PropTypes.number
+  data: PropTypes.arrayOf(PropTypes.object)
 }
-
-/*
-          <BarChart 
-                data={data}
-                >
- */

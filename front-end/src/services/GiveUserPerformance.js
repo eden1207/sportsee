@@ -3,10 +3,21 @@ import { useParams } from 'react-router-dom';
 import UserPerformance from '../components/UserPage/UserPerformance';
 
 
+/*-- File containing the function associated to the component displaying the third graph of 
+     performance in different fields --*/
+
+
+/* Function used to get the data of performance in different fields */ 
 
 function getUserPerformance(data) {
 
     const performance = data.data;
+
+    /* For each performance, a value is provided as function of a number */
+
+    /* Each number is associated to a field (speed, cardio...) */
+
+    /* We replace the number by the corresponding field name */
 
     performance.forEach((e) => {
   
@@ -46,7 +57,11 @@ function getUserPerformance(data) {
 }
   
 
+/* Function displaying the first graph */
 
+/* We make an API call by using the endpoint 'http://localhost:3000/user/id/performance' */
+
+/* If you want to see more informations about this kind of function, please, go to the GiveUserMainData.js file */
 
 export default function GiveUserPerformance() {
 

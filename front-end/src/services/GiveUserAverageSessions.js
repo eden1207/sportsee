@@ -3,9 +3,16 @@ import { useParams } from 'react-router-dom';
 import UserAverageSessions from '../components/UserPage/UserAverageSessions';
 
 
+/*-- File containing the function associated to the component displaying the second graph of 
+     sessions mean duration as function of the days --*/
+
+/* Function used to get the data of the user sessions mean duration as function of the days */ 
+
 function getUserAverageSessions(data) {
 
     const sessions = data.sessions;
+
+    /* We transform the day number by the day name first letter */
 
     sessions.forEach((e) => {
   
@@ -48,6 +55,11 @@ function getUserAverageSessions(data) {
 }
   
   
+/* Function displaying the second graph */
+
+/* We make an API call by using the endpoint 'http://localhost:3000/user/id/average-sessions' */
+
+/* If you want to see more informations about this kind of function, please, go to the GiveUserMainData.js file */
 
 export default function GiveUserAverageSessions() {
 

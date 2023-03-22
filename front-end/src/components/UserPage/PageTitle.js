@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import '../../styles/PageTitle/PageTitle.css';
 
+/*-- Function displaying the page title with the user's firstname --*/
 
 export default function PageTitle({ name }) {
 
