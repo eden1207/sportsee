@@ -6,58 +6,66 @@ import UserAverageSessions from '../components/UserPage/UserAverageSessions';
 /*-- File containing the function associated to the component displaying the second graph of 
      sessions mean duration as function of the days --*/
 
-/* Function used to get the data of the user sessions mean duration as function of the days */ 
+/* Constructor pattern used to get the data of the user sessions mean duration as function of the days */ 
 
-function getUserAverageSessions(data) {
+class AverageSessions {
+  constructor(data) {
+    this._data = data
+  }
 
-    const sessions = data.sessions;
+  get sessions() {
+
+    const sessions = this._data.sessions;
 
     /* We transform the day number by the day name first letter */
 
     sessions.forEach((e) => {
   
-        switch (e.day) {
-    
-          case 1:
-            e.day = 'L';
-          break;
-    
-          case 2:
-            e.day = 'M';
-          break;
-    
-          case 3:
-            e.day = 'M';
-          break;
-    
-          case 4:
-            e.day = 'J';
-          break;
-    
-          case 5:
-            e.day = 'V';
-          break;
-    
-          case 6:
-            e.day = 'S';
-          break;
-    
-          case 7:
-            e.day = 'D';
-          break;
-    
-          default:
-            console.log('Unknown value');
-        }
-    })
+      switch (e.day) {
   
+        case 1:
+          e.day = 'L';
+        break;
+  
+        case 2:
+          e.day = 'M';
+        break;
+  
+        case 3:
+          e.day = 'M';
+        break;
+  
+        case 4:
+          e.day = 'J';
+        break;
+  
+        case 5:
+          e.day = 'V';
+        break;
+  
+        case 6:
+          e.day = 'S';
+        break;
+  
+        case 7:
+          e.day = 'D';
+        break;
+  
+        default:
+          console.log('Unknown value');
+      }
+    })
+
     return sessions
+  }
 }
   
   
 /* Function displaying the second graph */
 
 /* We make an API call by using the endpoint 'http://localhost:3000/user/id/average-sessions' */
+
+/* Here, we use an environment constante giving the port number */
 
 /* If you want to see more informations about this kind of function, please, go to the GiveUserMainData.js file */
 
@@ -71,7 +79,7 @@ export default function GiveUserAverageSessions() {
 
     useEffect(() => {
         
-        fetch('http://localhost:3000/user/' + id + '/average-sessions')
+        fetch(process.env.REACT_APP_PORT + '/user/' + id + '/average-sessions')
           .then(res => res.json())
           .then(
             (result) => {
@@ -92,7 +100,7 @@ export default function GiveUserAverageSessions() {
         return <div>Loading...</div>;
       } else {
 
-        const data = getUserAverageSessions(items.data);
+        const data = new AverageSessions(items.data).sessions;
 
         return(
             <React.Fragment>

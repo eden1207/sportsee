@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/:id' element={<GiveUserMainData />} />
+        <Route path='/users/:id' element={<GiveUserMainData />} />
       </Routes>
     </div>
   );

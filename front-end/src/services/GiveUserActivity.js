@@ -4,14 +4,19 @@ import UserActivity from '../components/UserPage/UserActivity';
 
 
 /*-- File containing the function associated to the component displaying the first graph of 
-     weight and caories as function of the days --*/
+     weight and calories as function of the days --*/
 
 
-/* Function used to get the data of the user weigth and calories as function of the days */     
+/* Constructor pattern used to get the data of the user weigth and calories as function of the days */     
 
-function getUserActivityData(data) {
+class Activity {
+  constructor(data) {
+    this._data = data
+  }
 
-    const sessions = data.sessions;
+  get sessions() {
+
+    const sessions = this._data.sessions;
 
     /* We obtain the day that we transform to the corresponding number
         ex: 07/11/2022 => 7 */
@@ -21,13 +26,15 @@ function getUserActivityData(data) {
         e.day = Number(day);
     })
 
-  
     return sessions
+  }
 }
 
 /* Function displaying the first graph */
 
 /* We make an API call by using the endpoint 'http://localhost:3000/user/id/activity' */
+
+/* Here, we use an environment constante giving the port number */
 
 /* If you want to see more informations about this kind of function, please, go to the GiveUserMainData.js file */
 
@@ -41,7 +48,7 @@ export default function GiveUserActivity() {
 
     useEffect(() => {
         
-        fetch('http://localhost:3000/user/' + id + '/activity')
+        fetch(process.env.REACT_APP_PORT + '/user/' + id + '/activity')
           .then(res => res.json())
           .then(
             (result) => {
@@ -62,7 +69,7 @@ export default function GiveUserActivity() {
         return <div>Loading...</div>;
       } else {
 
-        const data = getUserActivityData(items.data);
+        const data = new Activity(items.data).sessions;
 
         return(
             <React.Fragment>

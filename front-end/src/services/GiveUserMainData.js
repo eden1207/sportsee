@@ -11,10 +11,13 @@ import UserPage from '../components/UserPage/UserPage';
 
 function giveDailyScore(data, id) {
 
-    if(id === 12){
+    const firstUserID = 12;
+    const secondUserID = 18;
+
+    if(id === firstUserID){
         const dailyScore = data.todayScore*100;
         return dailyScore
-    } else if(id === 18) {
+    } else if(id === secondUserID) {
         const dailyScore = data.score*100;
         return dailyScore
     } else{
@@ -22,32 +25,52 @@ function giveDailyScore(data, id) {
     }
 }
 
-/* Function created to formate the user data from the API */
+/* Class created to formate the user data from the API */
 
-/* It returns an object containing the different user main data displayed on the page
+/* It is a constructor pattern containing the different user main data displayed on the page
   excepted the data of the graphs  */
 
-function userMainData(data) {
+class Main {
+  constructor(data) {
+    this._data = data
+  }
 
-    const id = data.id;
-  
-    const firstName = data.userInfos.firstName;
+  get id() {
+    return this._data.id
+  }
 
-    const dailyScore = giveDailyScore(data, id);
-  
+  get firstName() {
+    return this._data.userInfos.firstName
+  }
+
+  get dailyScore() {
+    return giveDailyScore(this._data, this._data.id)
+  }
+
+  get calorieCount() {
     /* toFixed is used to display a number with three decimals and replace to change '.' to ',' */
-    const calorieCount = (data.keyData.calorieCount/1000).toFixed(3).replace(".",",");
-    const proteinCount = data.keyData.proteinCount;
-    const carbohydrateCount = data.keyData.carbohydrateCount;
-    const lipidCount = data.keyData.lipidCount;
-  
-    return({ id, firstName, dailyScore, calorieCount, proteinCount, carbohydrateCount, lipidCount })
+    return (this._data.keyData.calorieCount/1000).toFixed(3).replace(".",",")
+  }
+
+  get proteinCount() {
+    return this._data.keyData.proteinCount
+  }
+
+  get carbohydrateCount() {
+    return this._data.keyData.carbohydrateCount
+  }
+
+  get lipidCount() {
+    return this._data.keyData.lipidCount
+  }
 }
 
 
 /* Function displaying the user page */
 
 /* We are using the hook useEffect() to make an API call by using the endpoint 'http://localhost:3000/user/id' */
+
+/* Here, we use an environment constante giving the port number */
 
 /* We obtain an object 'items' thanks to the hook useState() and we keep the .data element */
 
@@ -69,7 +92,7 @@ export default function GiveUserMainData() {
 
     useEffect(() => {
         
-        fetch('http://localhost:3000/user/' + id)
+        fetch(process.env.REACT_APP_PORT + '/user/' + id)
           .then(res => res.json())
           .then(
             (result) => {
@@ -90,7 +113,7 @@ export default function GiveUserMainData() {
         return <div>Loading...</div>;
       } else {
 
-        const data = userMainData(items.data);
+        const data = new Main(items.data);
 
         return(
             <React.Fragment>

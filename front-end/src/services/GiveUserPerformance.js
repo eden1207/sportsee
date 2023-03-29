@@ -7,11 +7,16 @@ import UserPerformance from '../components/UserPage/UserPerformance';
      performance in different fields --*/
 
 
-/* Function used to get the data of performance in different fields */ 
+/* Constructor pattern used to get the data of performance in different fields */ 
 
-function getUserPerformance(data) {
+class Performance {
+  constructor(data) {
+    this._data = data
+  }
 
-    const performance = data.data;
+  get performance() {
+
+    const performance = this._data.data;
 
     /* For each performance, a value is provided as function of a number */
 
@@ -52,14 +57,16 @@ function getUserPerformance(data) {
         }
     })
 
-  
     return performance
+  }
 }
   
 
 /* Function displaying the first graph */
 
 /* We make an API call by using the endpoint 'http://localhost:3000/user/id/performance' */
+
+/* Here, we use an environment constante giving the port number */
 
 /* If you want to see more informations about this kind of function, please, go to the GiveUserMainData.js file */
 
@@ -73,7 +80,7 @@ export default function GiveUserPerformance() {
 
     useEffect(() => {
         
-        fetch('http://localhost:3000/user/' + id + '/performance')
+        fetch(process.env.REACT_APP_PORT + '/user/' + id + '/performance')
           .then(res => res.json())
           .then(
             (result) => {
@@ -94,7 +101,7 @@ export default function GiveUserPerformance() {
         return <div>Loading...</div>;
       } else {
 
-        const data = getUserPerformance(items.data);
+        const data = new Performance(items.data).performance;
 
         return(
             <React.Fragment>
