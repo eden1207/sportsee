@@ -51,6 +51,11 @@ REACT_APP_PORT='http://localhost:3000'
 
 If you need to work on another port, please, change here the port number.
 
+We also do the same for the constant isMocked. This is a boolean made to switch from the data of the back-end (isMocked = false) to the mocked data (isMocked = true). In the .env, the value is in the following constant:
+
+```
+REACT_APP_MOCKED_DATA=false
+```
 
 ### Run the project :
 

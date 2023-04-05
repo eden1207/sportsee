@@ -6,7 +6,7 @@
         justify-content: space-between;
         align-items: center;
         &_dimensions{
-            @include dimensions(70%, 124px);
+            @include dimensions(85%, 124px);
         }
         &_aspect{
             background-color: #fbfbfb;
@@ -58,7 +58,9 @@
             line-height: 10px;
         }
     }
+}
 
+@media all and (min-width: 1220px) {
     .userDataCard-title{
         @include syntaxe-roboto(20px, bold);
         color: #282D30;
@@ -67,5 +69,19 @@
     .userDataCard-name{
         @include syntaxe-roboto(14px, normal);
         color: #74798C;
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1219px) {
+    .userDataCard-title{
+        @include syntaxe-roboto(14px, bold);
+        color: #282D30;
+        @include margin-package(none, none, 5%, none);
+    }
+
+    .userDataCard-name{
+        @include syntaxe-roboto(10px, normal);
+        color: #74798C;
+        @include margin-package(none, none, 5%, none);
     }
 }

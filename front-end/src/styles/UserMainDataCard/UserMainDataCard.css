@@ -6,7 +6,7 @@
     align-items: center;
   }
   .userMainDataCard_dimensions {
-    width: 70%;
+    width: 85%;
     height: 124px;
   }
   .userMainDataCard_aspect {
@@ -59,6 +59,8 @@
     height: 60px;
     line-height: 10px;
   }
+}
+@media all and (min-width: 1220px) {
   .userDataCard-title {
     font-family: "Roboto", sans-serif;
     font-size: 20px;
@@ -70,5 +72,27 @@
     font-size: 14px;
     font-weight: normal;
     color: #74798C;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1219px) {
+  .userDataCard-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #282D30;
+    margin-top: none;
+    margin-bottom: none;
+    margin-left: 5%;
+    margin-right: none;
+  }
+  .userDataCard-name {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    color: #74798C;
+    margin-top: none;
+    margin-bottom: none;
+    margin-left: 5%;
+    margin-right: none;
   }
 }/*# sourceMappingURL=UserMainDataCard.css.map */

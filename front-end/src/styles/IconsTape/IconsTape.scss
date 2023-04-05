@@ -8,7 +8,7 @@
         justify-content: flex-end;
         align-items: center;
         &_dimensions{
-            @include dimensions(117px, 933px);
+            @include dimensions(117px, 100%);
         }
         &_aspect{
             background-color: black;

@@ -8,8 +8,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        @include dimensions(100%, 250px);
-        line-height: 30px;
+        @include dimensions(100%, 150px);
+        line-height: 10px;
     }
 
     .title{

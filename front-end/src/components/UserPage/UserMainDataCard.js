@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 import '../../styles/UserMainDataCard/UserMainDataCard.css'
 
 
-/*-- Function displaying the main informations on the right
-    such as the calories rates and so on --*/
+/**
+ * Function displaying the main informations on the right 
+ * such as the calories rates and so on 
+ */
 
 export default function UserMainDataCard({ symbol, color, title, name }) {
 

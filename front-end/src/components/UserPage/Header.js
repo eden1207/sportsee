@@ -5,7 +5,10 @@ import logo from '../../assets/logo.JPG'
 import '../../styles/Header/Header.css'
 
 
-/*-- Function displaying the header of the page --*/
+/**
+ * Function displaying the header of the page
+ * 
+ */
 
 
 export default function Header() {

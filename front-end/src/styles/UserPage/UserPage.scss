@@ -7,7 +7,7 @@
         justify-content: space-between;
         align-items: center;
         &_dimensions{
-            @include dimensions(100%, 1024px);
+            @include dimensions(100%, 780px);
         }
     }
 
@@ -16,12 +16,21 @@
         justify-content: space-between;
         align-items: center;
         &_dimensions{
-            @include dimensions(100%, 933px);
+            @include dimensions(100%, 689px);
         }
     }
 
     .PageContent{
-        @include dimensions(100%, 933px);
+        @include dimensions(100%, 100%);
+    }
+
+    .ErrorMessage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include margin-package(200px, none, none, none);
+        color: red;
+        @include syntaxe-roboto(48px, bold);
     }
 
     .DataPart{
@@ -29,7 +38,7 @@
         justify-content: flex-end;
         align-items: center;
         &_dimensions{
-            @include dimensions(100%, 683px);
+            @include dimensions(100%, 538px);
         }
     }
     
@@ -40,17 +49,21 @@
         align-items: flex-start;
         &_dimensions{
             row-gap: 40px;
-            @include dimensions(25%, 683px);
+            @include dimensions(20%, 100%);
         }
     }
+}
 
+
+
+@media all and (min-width: 1220px) {
     .UserGraphs{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         &_dimensions{
-            @include dimensions(72%, 683px);
+            @include dimensions(75%, 100%);
         }
     }
 
@@ -58,7 +71,25 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @include dimensions(89%, 363px);
-        @include margin-package(none, none, 2%, none);
+        @include dimensions(88%, 280px);
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1219px) {
+    .UserGraphs{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        &_dimensions{
+            @include dimensions(80%, 100%);
+        }
+    }
+
+    .OtherDatas{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include dimensions(100%, 280px);
     }
 }

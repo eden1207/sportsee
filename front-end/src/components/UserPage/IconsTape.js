@@ -6,7 +6,9 @@ import { BiSwim } from "react-icons/bi";
 
 import '../../styles/IconsTape/IconsTape.css'
 
-/*-- Function displaying the vertical black tape on the left with icons --*/
+/**
+* Function displaying the vertical black tape on the left with icons
+*/
 
 export default function IconsTape() {
 
