@@ -3,8 +3,8 @@
   .UserActivityGraph {
     background-color: #fbfbfb;
     border-radius: 5px;
-    margin-top: none;
-    margin-bottom: none;
+    margin-top: none !important;
+    margin-bottom: none !important;
     margin-left: 2%;
     margin-right: none;
   }
@@ -13,9 +13,9 @@
     justify-content: space-between;
     align-items: center;
     width: 95%;
-    height: auto;
-    margin-top: none;
-    margin-bottom: none;
+    height: auto !important;
+    margin-top: none !important;
+    margin-bottom: none !important;
     margin-left: 2%;
     margin-right: none;
   }
@@ -35,15 +35,15 @@
     font-weight: normal;
     color: #74798C;
     width: 32%;
-    height: auto;
+    height: auto !important;
   }
   .userActivityGraphLegendBlackPoint {
     color: #282D30;
     font-family: "Roboto", sans-serif;
     font-size: 10px;
     font-weight: normal;
-    margin-top: none;
-    margin-bottom: none;
+    margin-top: none !important;
+    margin-bottom: none !important;
     margin-left: none;
     margin-right: 10px;
   }
@@ -52,8 +52,8 @@
     font-family: "Roboto", sans-serif;
     font-size: 10px;
     font-weight: normal;
-    margin-top: none;
-    margin-bottom: none;
+    margin-top: none !important;
+    margin-bottom: none !important;
     margin-left: none;
     margin-right: 10px;
   }

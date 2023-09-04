@@ -8,7 +8,7 @@
   }
   .iconsTape_dimensions {
     width: 117px;
-    height: 100%;
+    height: 100% !important;
   }
   .iconsTape_aspect {
     background-color: black;
@@ -21,7 +21,7 @@
   }
   .menu2_dimensions {
     width: none;
-    height: 320px;
+    height: 320px !important;
   }
   .menu-link2 {
     display: flex;
@@ -30,7 +30,7 @@
   }
   .menu-link2_dimensions {
     width: 64px;
-    height: 64px;
+    height: 64px !important;
   }
   .menu-link2_aspect {
     color: #FF0101;
@@ -48,7 +48,7 @@
   }
   .menu-link2:hover_dimensions {
     width: 64px;
-    height: 64px;
+    height: 64px !important;
   }
   .menu-link2:hover_aspect {
     color: #FF0101;
@@ -67,8 +67,8 @@
     font-family: "Roboto", sans-serif;
     font-size: 12px;
     font-weight: normal;
-    margin-top: 150px;
-    margin-bottom: 70px;
+    margin-top: 150px !important;
+    margin-bottom: 70px !important;
     margin-left: none;
     margin-right: none;
   }

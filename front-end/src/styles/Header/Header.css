@@ -7,7 +7,7 @@
   }
   .header_dimensions {
     width: 100%;
-    height: 91px;
+    height: 91px !important;
   }
   .header_border {
     box-shadow: 0px 4px 4px 0px black;
@@ -17,9 +17,9 @@
   }
   .logo {
     width: 200px;
-    height: auto;
-    margin-top: none;
-    margin-bottom: none;
+    height: auto !important;
+    margin-top: none !important;
+    margin-bottom: none !important;
     margin-left: 2%;
     margin-right: none;
   }
@@ -30,11 +30,11 @@
   }
   .menu_dimensions {
     width: 70%;
-    height: none;
+    height: none !important;
   }
   .menu_borders {
-    margin-top: none;
-    margin-bottom: none;
+    margin-top: none !important;
+    margin-bottom: none !important;
     margin-left: none;
     margin-right: 7%;
   }

@@ -7,7 +7,7 @@
   }
   .userMainDataCard_dimensions {
     width: 85%;
-    height: 124px;
+    height: 124px !important;
   }
   .userMainDataCard_aspect {
     background-color: #fbfbfb;
@@ -23,11 +23,11 @@
   }
   .userDataCard_dimensions {
     width: 60px;
-    height: 60px;
+    height: 60px !important;
   }
   .userDataCard_borders {
-    margin-top: none;
-    margin-bottom: none;
+    margin-top: none !important;
+    margin-bottom: none !important;
     margin-left: 10%;
     margin-right: none;
     border-radius: 6px;
@@ -56,7 +56,7 @@
   }
   .userDataCard-text_dimensions {
     width: 55%;
-    height: 60px;
+    height: 60px !important;
     line-height: 10px;
   }
 }
@@ -80,8 +80,8 @@
     font-size: 14px;
     font-weight: bold;
     color: #282D30;
-    margin-top: none;
-    margin-bottom: none;
+    margin-top: none !important;
+    margin-bottom: none !important;
     margin-left: 5%;
     margin-right: none;
   }
@@ -90,8 +90,8 @@
     font-size: 10px;
     font-weight: normal;
     color: #74798C;
-    margin-top: none;
-    margin-bottom: none;
+    margin-top: none !important;
+    margin-bottom: none !important;
     margin-left: 5%;
     margin-right: none;
   }

@@ -5,9 +5,9 @@
     justify-content: flex-start;
     align-items: center;
     width: 33%;
-    height: 263px;
-    margin-top: none;
-    margin-bottom: 35px;
+    height: 263px !important;
+    margin-top: none !important;
+    margin-bottom: 35px !important;
     margin-left: none;
     margin-right: none;
     background-color: #282D30;
